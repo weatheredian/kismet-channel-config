@@ -5,6 +5,7 @@ the GUI will edit a new override file, located in this repo (kismet_site_2.conf)
 the additional override file will need to be added to the standard kismet.conf file
 
 USE:
+    
     1. Select which Wi-Fi channel
     2. Save channel selection
 
