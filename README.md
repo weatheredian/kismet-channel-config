@@ -1,5 +1,5 @@
 # kismet-channel-config
- selects specific kismet channel for sniffing
+ selects specific kismet channel for sniffing & converts kismet file to PCAP
 
 the GUI will edit a new override file, located in this repo (kismet_site_2.conf)
 the additional override file will need to be added to the standard kismet.conf file
