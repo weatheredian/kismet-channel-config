@@ -35,33 +35,33 @@ def save_function():
 
 save_button = ttk.Button(tab1, text="Save Channel Config", command=save_function).pack(pady=10)
 
-def my_tracer(a, b, c):
-   new_text = file_sel.get()
-   label_text.set(new_text)
+#def my_tracer(a, b, c):
+   #new_text = file_sel.get()
+   #label_text.set(new_text)
 
-file_sel = StringVar()
-file_sel.trace('w', my_tracer)
+#file_sel = StringVar()
+#file_sel.trace('w', my_tracer)
 
-def select_file():
-    filetypes = (("Kismet files", "*.kismet"), ("All files", "*.*"))
-    filepath = askopenfilename(
-        title="Open Kismet File", 
-        initialdir="~/",
-        filetypes=filetypes
-    )
-    if filepath:
-        file_sel.set(filepath)
-        print(f"Selected file: {file_sel.get()}")
-        toggle_convert_visible()
-    else:
-        file_sel.set("no file selected")
-        print("No file selected.")
+#def select_file():
+    #filetypes = (("Kismet files", "*.kismet"), ("All files", "*.*"))
+    #filepath = askopenfilename(
+        #title="Open Kismet File", 
+        #initialdir="~/",
+        #filetypes=filetypes
+    #)
+    #if filepath:
+        #file_sel.set(filepath)
+        #print(f"Selected file: {file_sel.get()}")
+        #toggle_convert_visible()
+    #else:
+        #file_sel.set("no file selected")
+        #print("No file selected.")
 
-open_file_button = ttk.Button(
-    tab2,
-    text = "open a kismet file to convert", 
-    command = select_file
-).pack(pady=10)
+#open_file_button = ttk.Button(
+    #tab2,
+    #text = "open a kismet file to convert", 
+    #command = select_file
+#).pack(pady=10)
 
 label_text = StringVar()
 select_header = Label(tab2, text="Selected file:")
