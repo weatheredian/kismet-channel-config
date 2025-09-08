@@ -14,7 +14,7 @@ root.resizable(False, False)
 
 tabControl = ttk.Notebook(root)
 tab1 = ttk.Frame(tabControl)
-tab2 = ttk.Frame(tabControl)
+#tab2 = ttk.Frame(tabControl)
 
 tabControl.add(tab1, text ='Kismet Config')
 tabControl.add(tab2, text ='Kismet to PCAP')
@@ -63,30 +63,30 @@ save_button = ttk.Button(tab1, text="Save Channel Config", command=save_function
     #command = select_file
 #).pack(pady=10)
 
-label_text = StringVar()
-select_header = Label(tab2, text="Selected file:")
-selected_file_label = Label(tab2, textvariable=label_text)
+#label_text = StringVar()
+#select_header = Label(tab2, text="Selected file:")
+#selected_file_label = Label(tab2, textvariable=label_text)
 
-def toggle_convert_visible():
-    if selected_file_label.winfo_viewable():
-        select_header.pack_forget()
-        selected_file_label.pack_forget()
+#def toggle_convert_visible():
+    #if selected_file_label.winfo_viewable():
+        #select_header.pack_forget()
+        #selected_file_label.pack_forget()
 
-    else:
-        select_header.pack(pady=5)
-        selected_file_label.pack(pady=5)
-        convert_button.pack(pady=10)
+    #else:
+        #select_header.pack(pady=5)
+        #selected_file_label.pack(pady=5)
+        #convert_button.pack(pady=10)
 
-def convert_file():
-    #convert files using ../shell/convert.sh
-    result = subprocess.run(['../shell/convert.sh'], capture_output=True, text=True)
-    print(result.stdout)
+#def convert_file():
+    ##convert files using ../shell/convert.sh
+    #result = subprocess.run(['../shell/convert.sh'], capture_output=True, text=True)
+    #print(result.stdout)
 
-convert_button = ttk.Button(
-    tab2,
-    text = "convert kismet file to pcapng",
-    command = convert_file
-).pack(pady=10)
+#convert_button = ttk.Button(
+    #tab2,
+    #text = "convert kismet file to pcapng",
+    #command = convert_file
+#).pack(pady=10)
 
 sv_ttk.set_theme("dark")
 root.mainloop()
