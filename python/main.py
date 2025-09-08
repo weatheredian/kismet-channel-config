@@ -17,7 +17,7 @@ tab1 = ttk.Frame(tabControl)
 #tab2 = ttk.Frame(tabControl)
 
 tabControl.add(tab1, text ='Kismet Config')
-tabControl.add(tab2, text ='Kismet to PCAP')
+#tabControl.add(tab2, text ='Kismet to PCAP')
 tabControl.pack(expand=1, fill="both")
 
 lbl = Label(tab1, text="Select a channel to configure Kismet.").pack(pady=10)
