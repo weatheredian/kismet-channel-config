@@ -86,7 +86,7 @@ convert_button = ttk.Button(
     tab2,
     text = "convert kismet file to pcapng",
     command = convert_file
-)
+).pack(pady=10)
 
 sv_ttk.set_theme("dark")
 root.mainloop()
